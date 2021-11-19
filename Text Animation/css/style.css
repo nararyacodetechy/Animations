@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1c234a;
+}
+ul{
+    position: relative;
+}
+ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+ul li span{
+    position: relative;
+    top: -8px;
+    left: -6px;
+    color: transparent;
+    font-size: 34px
+}
+ul li:hover span{
+    color: #ef0448;
+    cursor: pointer;
+}
+ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 3em;
+    color: rgb(131, 206, 196);
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+ul li span{
+    position: relative;
+    top: -6px;
+    left: -8px;
+}
+ul li a:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    color: rgb(131, 206, 196);
+    white-space: nowrap; 
+}
+ul:hover li a:before{
+    animation: animate 0.5s steps(11) forwards;
+    color: #1bfaad;
+}
+@keyframes animate{
+    0%{
+        width: 400px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+
+ul li:hover a:before{
+    animation: animatetwo 1s steps(11) forwards;
+}
+@keyframes animatetwo{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 400px;
+    }
+}

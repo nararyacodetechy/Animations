@@ -1,0 +1,134 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 16px; }
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+/* field text 1 */
+input{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    margin: 10px 10px 10px 10px;
+}
+input::placeholder{
+    color: #222;
+}
+input:focus::placeholder{
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+/* field text 2 */
+.costum-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+.costum-field input.one{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+}
+.costum-field .placeholder{
+    position: absolute;
+    left: 15px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+.costum-field input.one:valid + .placeholder,
+.costum-field input.one:focus + .placeholder{
+    top: 20px;
+    font-size: 12px;
+    color: #222;
+}
+
+/* field text 3 */
+.costum-field input.two{
+    background: none;
+    border: 2px solid #ddd;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.costum-field input.two:valid + .placeholder,
+.costum-field input.two:focus + .placeholder{
+    top: 32px;
+    font-size: 12px;
+    color: #222;
+    background: #fff;
+    padding: 5px;
+    left: 15px;
+}
+.costum-field input.two:valid,
+.costum-field input.two:focus{
+    border-color: #222;
+}
+
+/* field text 4 */
+.costum-field input.three{
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: 
+        linear-gradient(90deg, #222, #222) center bottom/0 2px no-repeat,
+        linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+        linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+}
+.costum-field .placeholder{
+    position: absolute;
+    left: 15px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+.costum-field input.three:valid + .placeholder,
+.costum-field input.three:focus + .placeholder{
+    top: 20px;
+    font-size: 12px;
+    color: #222;
+    left: 15px;
+    background-size: 100% 2px, 100% 2px, 100%;
+}
+.costum-field input.three:valid,
+.costum-field input.three:focus{
+    background-size: 100% 2px, 100% 2px, 100%;
+}
